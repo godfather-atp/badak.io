@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Only For You 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         PRIVATE WEBSITE POPUP
+    ========================================== -->
+
+    <div class="overlay" id="privatePopup">
+
+        <div class="modal">
+
+            <div class="modal-icon">🔒</div>
+
+            <h2>Private Website</h2>
+
+            <p>
+                This website has been created
+                <strong>exclusively for you.</strong>
+            </p>
+
+            <p class="small-text">
+                Sharing this website with anyone else
+                is strictly prohibited. 😤
+            </p>
+
+            <button onclick="startWebsite()">
+                I Understand ❤️
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         WRONG ANSWER POPUP
+    ========================================== -->
+
+    <div class="overlay hidden" id="wrongPopup">
+
+        <div class="modal">
+
+            <div class="modal-icon">❌</div>
+
+            <h2>Wrong Answer!</h2>
+
+            <p id="wrongMessage">
+                Firse sooch 
+            </p>
+
+            <button onclick="closeWrongPopup()">
+                Try Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         BELLINGHAM POPUP
+    ========================================== -->
+
+    <div class="overlay hidden" id="duckPopup">
+
+        <div class="modal">
+
+            
+
+            <h2>Seriously?! 😭</h2>
+
+            <img
+                src="img/istockphoto-464988959-612x612.jpg"
+                alt="Duck"
+                class="duck-image"
+            >
+
+            <p>
+                You actually chose Bellingham?
+            </p>
+
+
+            <button onclick="closeDuckPopup()">
+                pls pedri select kr 😭
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         MAIN WEBSITE
+    ========================================== -->
+
+    <main class="container hidden" id="main">
+
+
+        <!-- QUESTION 1 -->
+
+        <section class="card" id="q1">
+
+            <div class="step">
+                Question 1 of 2
+            </div>
+
+            <h1>
+                Identity Verification 🔐
+            </h1>
+
+            <p>
+                To make sure you're actually the
+                person this website was made for,
+                answer the following question.
+            </p>
+
+            <h2>
+                What is the gender of the person
+                who made this website?
+            </h2>
+
+            <div class="options">
+
+                <button onclick="genderAnswer('male')">
+                    👨 Male
+                </button>
+
+                <button onclick="genderAnswer('female')">
+                    👩 Female
+                </button>
+
+                <button onclick="genderAnswer('male-lesbian')">
+                    🏳️‍🌈 Male Lesbian
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUESTION 2 -->
+
+        <section class="card hidden" id="q2">
+
+            <div class="step">
+                Question 2 of 2
+            </div>
+
+            <h1>
+                Very Important Question ⚽
+            </h1>
+
+           
+
+            <h2>
+                Who is the best midfielder?
+            </h2>
+
+            <div class="options">
+
+                <button onclick="midfielder('pedri')">
+                    Pedri
+                </button>
+
+                <button onclick="midfielder('bellingham')">
+                     Bellingham
+                </button>
+
+            </div>
+
+            <div
+                id="midfielderResult"
+                class="result">
+            </div>
+
+            <button
+                id="nextBtn"
+                class="next hidden"
+                onclick="showApology()">
+                Continue ❤️
+            </button>
+
+        </section>
+
+
+        <!-- APOLOGY -->
+
+        <section class="card hidden" id="apology">
+
+            
+
+            <h1>
+                Okay... Now The Actual Reason
+            </h1>
+
+            <div class="apology-box">
+
+                <p id="apologyText">
+
+                    Trust me mera matlab vo nahi tha i will explain
+                    you.... jab bhi tu free ho
+
+                </p>
+
+            </div>
+
+            <h2>
+                ab thik hai 
+            </h2>
+
+            <div class="options">
+
+                <button onclick="happyEnding()">
+                    Yes ❤️
+                </button>
+
+                <button onclick="kasamEnding()">
+                    No 😐
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- YES ENDING -->
+
+        <section
+            class="card hidden"
+            id="yesEnding">
+
+            <div class="celebrate">
+                 🎉
+            </div>
+
+            <p>
+                thnk you call pe sab samjhaunga.
+            </p>
+
+            
+        </section>
+
+
+        <!-- NO ENDING -->
+
+        <section
+            class="card hidden"
+            id="noEnding">
+
+            <h1>
+                abi bhi nhi bharosa🥺
+            </h1>
+
+            <img
+                src="img/WhatsApp Image 2026-09-10 at 7.31.25 PM.jpeg"
+                alt="Please believe me"
+                class="photo"
+            >
+
+            <div class="kasam">
+
+                <h2>
+                    Inki kasam...
+                </h2>
+
+                <p>
+                    I genuinely didn't mean it.
+                </p>
+
+                <p>
+                   samjh jaa ab to🥺
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
